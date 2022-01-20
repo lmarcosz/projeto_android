@@ -1,0 +1,201 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(../fontes/coolvetica\ condensed\ rg.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Android';
+    src: url(../fontes/idroid.otf) format('opentype');
+}
+
+/*=======CONFIG GLOBAIS=======*/
+:root{
+    --cor00: white;
+    --cor01: rgb(157, 236, 191);
+    --cor02: rgb(63, 230, 138);
+    --cor03: rgb(51, 175, 107);
+    --cor04: rgb(21, 78, 47);
+    --corsombra01: rgba(0, 0, 0, 0.205);
+    --corsombra02: rgba(0, 0, 0, 0.5);
+    --fonte01: Arial, Helvetica, sans-serif;
+    --fonte02: 'Coolvetica', sans-serif;
+    --fonte03: 'Android', sans-serif;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+/*=======CONFIG CORPO=======*/
+body{
+    background-color: var(--cor01);
+    margin: 0%;
+    padding: 0%;
+}
+
+/*=======CONFIG CABEÇALHO=======*/
+header{
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor04));
+    color: white;
+    min-height: 150px; 
+    text-align: center;
+    padding-top: 30px;
+}
+header > h1{
+    font-family: var(--fonte02);
+    font-size: 3em;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px var(--corsombra02);
+    margin: 0;
+    padding: 10px;
+}
+header > p{
+    font-family: var(--fonte01);
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px black;
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 0px 10px 10px 10px;
+}
+nav{
+    background-color: var(--cor04);
+    padding-top: 10px;
+    padding: 10px;
+}
+nav > a{
+    color: var(--cor01);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+}
+nav > a:hover{
+    background-color: var(--cor01);
+    color: var(--cor04);
+    transition-duration: 0.5s;
+}
+
+
+/*=======CONFIG CONTEÚDO=======*/
+main{
+    background-color: var(--cor00);
+    min-width: 280px;
+    max-width: 1000px;
+    padding: 10px;
+    margin: 0px auto 50px auto;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 6px var(--corsombra02);
+}
+
+.conteudo_principal{
+    padding: 10px;
+}
+.titulo_droid{
+    font-family: 'Android', sans-serif;
+    font-size: 1.8em;
+    color: var(--cor04);
+}
+h3.titulo_droid{
+    font-size: 1.5em;
+    background-image: linear-gradient(to right, var(--cor01), transparent);
+    padding: 2px 8px;
+    line-height: 1.1em;
+    border-radius: 20px;
+    text-indent: 10px;
+    font-weight: normal;
+}
+.texto{
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+strong{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor04);
+}
+.link_texto{
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--cor01);
+    color: var(--cor04);
+    padding: 2px;
+    border-radius: 5px;
+}
+main .link_texto::after{
+    content: '🔗';
+}
+img{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+#img_small{
+    display: block;
+    margin: auto;
+    max-width: 380px;
+}
+#secao_video{
+    background-color: var(--cor04);
+    box-shadow: inset 0px 0px 8px 3px var(--corsombra01);
+    width: 100%;
+    margin: 0;
+}
+.video{
+    background-color: var(--cor04);
+    padding: 20px;
+    margin: 0px -20px;
+}
+.video > iframe{
+    aspect-ratio: 16/9;
+}
+aside{
+    background-color: var(--cor01);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 2px var(--corsombra01);
+}
+aside > h4{
+    background-color: var(--cor03);
+    color: var(--cor00);
+    font: normal 800 1.1em 'Arial', sans-serif;
+    border-radius: 15px 15px 0px 0px;
+    padding: 10px 10px;
+}
+aside p{
+    padding: 0px 10px 10px 10px;
+}
+aside ul{
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+    list-style-type: '\2714\00A0';
+    columns: 2;
+}
+aside .link_texto{
+    background-color: var(--cor02);
+}
+
+/*=======CONFIG RODAPÉ=======*/
+footer{
+    background-color: var(--cor04);
+    color: var(--cor01);
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px -4px 4px var(--corsombra01);
+}
+footer > p{
+    margin: 0;
+}
+footer strong{
+    color: var(--cor01);
+    font-weight: bold;
+}
+footer a{
+    font-weight: bold;
+    color: var(--cor00);
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
